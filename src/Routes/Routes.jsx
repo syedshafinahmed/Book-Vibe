@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
         path: "/",
         Component: Root,
         errorElement: <ErrorPage></ErrorPage>,
-        children:[
+        children: [
             {
                 index: true,
                 loader: () => fetch('booksData.json'),
@@ -20,11 +20,12 @@ export const router = createBrowserRouter([
                 Component: Home
             },
             {
-                path:"/about",
+                path: "/about",
                 Component: About
             },
             {
-                path:"/bookdetails/:id",
+                path: "/bookdetails/:id",
+                loader: () => fetch('booksData.json'),
                 Component: BookDetails
             }
         ]
