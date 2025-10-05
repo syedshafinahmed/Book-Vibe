@@ -10,7 +10,7 @@ const Navbar = () => {
             <Link to='/sort' className='m-2'>Sort</Link>
         </>
     return (
-        <div className="navbar bg-base-100 shadow-sm max-w-6xl mx-auto">
+        <div className="navbar bg-base-100 shadow-sm max-w-6xl mx-auto py-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -34,7 +34,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="btn btn-info text-white">Sign In</a>
             </div>
         </div>
     );
