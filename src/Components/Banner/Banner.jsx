@@ -2,7 +2,7 @@ import React from 'react';
 import bookimage from '../../assets/books.jpg'
 const Banner = () => {
     return (
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center max-w-6xl mx-auto'>
             <div>
                 <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, cum.</h1>
                 <button className='btn btn-primary'>View The List</button>

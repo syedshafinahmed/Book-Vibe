@@ -46,7 +46,7 @@ const ReadList = () => {
 
                 <TabPanel>
                     <h2 className='font-bold text-xl pt-7'>Books I've already read: {readlist.length}</h2>
-                    <div className='flex flex-wrap gap-7 py-10'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-10'>
                         {
                             readlist.map(b => <Book key={b.bookId} singleBook={b}></Book>)
                         }

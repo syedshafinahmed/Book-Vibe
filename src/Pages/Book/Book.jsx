@@ -21,7 +21,7 @@ const Book = ({ singleBook }) => {
                 </figure>
                 <div className="card-body p-9">
 
-                    <h2 className="card-title font-black text-2xl">{bookName}</h2>
+                    <h2 className="card-title font-black text-2xl playfair">{bookName}</h2>
                     <h2 className="font-medium text-sm">{author}, {yearOfPublishing}</h2>
                     <div className="flex gap-x-2">
                         {
