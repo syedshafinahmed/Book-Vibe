@@ -13,7 +13,7 @@ const BookDetails = () => {
     } = singleBook
     return (
         <div className='flex flex-col md:flex-row gap-x-10 p-10 items-center'>
-            <img className='w-full md:h-130 mb-10 md:mb-0' src={image} alt="" />
+            <img className='w-full md:h-150 mb-10 md:mb-0' src={image} alt="" />
             <div>
                 <h1 className='font-black text-3xl'>{bookName}</h1>
                 <p className='font-medium py-3 text-xl'>By: {author}</p>
@@ -26,7 +26,10 @@ const BookDetails = () => {
                 <p className='text-sm text-gray-600'>Publisher : <span className='font-bold text-black'>{publisher}</span></p>
                 <p className='text-sm text-gray-600'>Year of Publishing : <span className='font-bold text-black'>{yearOfPublishing}</span></p>
                 <p className='text-sm text-gray-600'>Rating : <span className='font-bold text-black'>{rating}</span></p>
-
+                <div className='flex gap-x-5 mt-5'>
+                    <button className='btn btn-soft'>Read</button>
+                    <button className='btn btn-soft btn-info hover:text-white'>Wishlist</button>
+                </div>
             </div>
         </div>
     );
