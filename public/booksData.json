@@ -21,7 +21,7 @@
     "totalPages": 281,
     "rating": 4.8,
     "category": "Fiction",
-    "tags": ["Drama", "Social Justice"],
+    "tags": ["Drama", "Social"],
     "publisher": "J.B. Lippincott & Co.",
     "yearOfPublishing": 1960
   },
@@ -47,7 +47,7 @@
     "totalPages": 224,
     "rating": 4.3,
     "category": "Fiction",
-    "tags": ["Young Adult", "Identity"],
+    "tags": ["Adult", "Identity"],
     "publisher": "Little, Brown and Company",
     "yearOfPublishing": 1951
   },
@@ -86,7 +86,7 @@
     "totalPages": 309,
     "rating": 4.8,
     "category": "Fantasy",
-    "tags": ["Magic", "Young Adult"],
+    "tags": ["Magic", "Adult"],
     "publisher": "Bloomsbury",
     "yearOfPublishing": 1997
   },

@@ -1,31 +1,43 @@
 import React, { use } from 'react';
 import { FaStar } from "react-icons/fa";
+import { Link } from 'react-router';
 
 const Book = ({ singleBook }) => {
     // const data = use(booksPromise);
     // console.log(data);
-    const { bookName, author, image, category, rating } = singleBook;
+    const { bookName, author, bookId, review
+        , tags, image, category, rating,
+        yearOfPublishing, publisher
+
+    } = singleBook;
     return (
-        <div className="card bg-base-100 w-96 p-6 shadow-sm border">
-            <figure className='p-4 bg-gray-100 w-2/3 mx-auto'>
-                <img
-                    className='h-[166px]'
-                    src={image}
-                    alt="Shoes" />
-            </figure>
-            <div className="card-body">
-                <h2 className="card-title">
-                    {bookName}
-                    <div className="badge badge-secondary">NEW</div>
-                </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                <div className="card-actions justify-end">
-                    <div className="badge badge-outline">{category}</div>
-                    <div className="badge badge-outline"><FaStar />{rating}
+        <Link to={`/bookDetails/${bookId}`}>
+            <div className="card bg-base-100 w-96 shadow-sm border border-gray-300 ">
+                <figure className='w-2/3 mx-auto pt-9'>
+                    <img
+                        className='h-[166px]'
+                        src={image}
+                        alt="Shoes" />
+                </figure>
+                <div className="card-body p-9">
+
+                    <h2 className="card-title font-black text-2xl">{bookName}</h2>
+                    <h2 className="font-medium text-sm">{author}, {yearOfPublishing}</h2>
+                    <div className="flex gap-x-2">
+                        {
+                            tags.map(tag => <span className='text-xs badge badge-secondary'>{tag}</span>)
+                        }
+                    </div>
+                    <p className='text-xs italic'>Published By: {publisher
+                    }</p>
+                    <div className="card-actions justify-end">
+                        <div className="badge badge-outline">{category}</div>
+                        <div className="badge badge-outline"><FaStar />{rating}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 
