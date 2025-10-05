@@ -5,14 +5,10 @@ import { Link } from 'react-router';
 const Book = ({ singleBook }) => {
     // const data = use(booksPromise);
     // console.log(data);
-    const { bookName, author, bookId, review
-        , tags, image, category, rating,
-        yearOfPublishing, publisher
-
-    } = singleBook;
+    const { bookName, author, bookId, tags, image, category, rating, yearOfPublishing, publisher } = singleBook;
     return (
         <Link to={`/bookDetails/${bookId}`}>
-            <div className="card bg-base-100 w-96 shadow-sm border border-gray-300 ">
+            <div className="card bg-base-100 w-96 h-110 shadow-sm border border-gray-300">
                 <figure className='w-2/3 mx-auto pt-9'>
                     <img
                         className='h-[166px]'
