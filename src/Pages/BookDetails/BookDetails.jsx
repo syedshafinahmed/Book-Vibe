@@ -12,8 +12,8 @@ const BookDetails = () => {
 
     } = singleBook
     return (
-        <div className='flex gap-x-10 p-10 items-center'>
-            <img className='w-full h-130' src={image} alt="" />
+        <div className='flex flex-col md:flex-row gap-x-10 p-10 items-center'>
+            <img className='w-full md:h-130 mb-10 md:mb-0' src={image} alt="" />
             <div>
                 <h1 className='font-black text-3xl'>{bookName}</h1>
                 <p className='font-medium py-3 text-xl'>By: {author}</p>
