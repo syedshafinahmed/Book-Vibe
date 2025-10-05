@@ -8,7 +8,7 @@ const Banner = () => {
                 <button className='btn btn-primary bg-[#23BE0A] border-none mt-10 rounded-lg'>View The List</button>
             </div>
             <div>
-                <img src={bookimage} alt="" />
+                <img className='rounded-lg' src={bookimage} alt="" />
             </div>
         </div>
     );

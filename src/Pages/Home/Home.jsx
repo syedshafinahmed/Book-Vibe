@@ -6,7 +6,7 @@ import { useLoaderData } from 'react-router';
 const Home = () => {
     const data = useLoaderData();
     return (
-        <div>
+        <div className='max-w-6xl mx-auto'>
             <Banner></Banner>
             <Books data={data}></Books>
         </div>

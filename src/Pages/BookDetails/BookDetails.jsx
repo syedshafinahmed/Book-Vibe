@@ -13,7 +13,7 @@ const BookDetails = () => {
         addToStoredDB(id);
     }
     return (
-        <div className='flex flex-col md:flex-row gap-x-10 p-10 items-center'>
+        <div className='flex flex-col md:flex-row gap-x-10 p-10 items-center max-w-6xl mx-auto'>
             <img className='w-full md:h-155 mb-10 md:mb-0' src={image} alt="" />
             <div>
                 <h1 className='font-black text-3xl playfair'>{bookName}</h1>

@@ -28,7 +28,7 @@ const ReadList = () => {
         setReadlist(myReadList);
     }, [])
     return (
-        <div>
+        <div className='max-w-6xl mx-auto'>
             <div className='flex justify-center'>
                 <details className="dropdown">
                     <summary className="btn m-1">Sort By {sort ? sort : ''}</summary>
