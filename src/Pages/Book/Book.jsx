@@ -28,8 +28,9 @@ const Book = ({ singleBook }) => {
                             tags.map(tag => <span className='text-xs badge badge-secondary'>{tag}</span>)
                         }
                     </div>
-                    <p className='text-xs italic'>Published By: {publisher
+                    <p className='text-xs italic pb-1'>Published By: {publisher
                     }</p>
+                    <span className='border-t-1 border-gray-300 border-dashed py-1'></span>
                     <div className="card-actions justify-end">
                         <div className="badge badge-outline">{category}</div>
                         <div className="badge badge-outline"><FaStar />{rating}
