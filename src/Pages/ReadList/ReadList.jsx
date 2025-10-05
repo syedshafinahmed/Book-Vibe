@@ -5,6 +5,19 @@ import 'react-tabs/style/react-tabs.css';
 import { getStoredBook } from '../../Utilities/AddToDB';
 import Book from '../Book/Book';
 const ReadList = () => {
+    const [sort, setSort] = useState("");
+    const handleSort = (type) => {
+        setSort(type)
+        if (type === "pages") {
+            const sortedByPage = [...readlist].sort((a, b) => a.totalPages - b.totalPages);
+            setReadlist(sortedByPage);
+        }
+        if (type === "ratings") {
+            const sortedByRatings = [...readlist].sort((a, b) => a.rating - b.rating);
+            setReadlist(sortedByRatings);
+        }
+    }
+
     const [readlist, setReadlist] = useState([]);
     const data = useLoaderData();
     useEffect(() => {
@@ -16,6 +29,15 @@ const ReadList = () => {
     }, [])
     return (
         <div>
+            <div className='flex justify-center'>
+                <details className="dropdown">
+                    <summary className="btn m-1">Sort By {sort ? sort : ''}</summary>
+                    <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                        <li onClick={() => handleSort("pages")}><a>Pages</a></li>
+                        <li onClick={() => handleSort("ratings")}><a>Ratings</a></li>
+                    </ul>
+                </details>
+            </div>
             <Tabs>
                 <TabList>
                     <Tab>Read</Tab>
