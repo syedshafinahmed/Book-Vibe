@@ -9,11 +9,11 @@ const ReadList = () => {
     const handleSort = (type) => {
         setSort(type)
         if (type === "pages") {
-            const sortedByPage = [...readlist].sort((a, b) => a.totalPages - b.totalPages);
+            const sortedByPage = [...readlist].sort((a, b) => b.totalPages - a.totalPages);
             setReadlist(sortedByPage);
         }
         if (type === "ratings") {
-            const sortedByRatings = [...readlist].sort((a, b) => a.rating - b.rating);
+            const sortedByRatings = [...readlist].sort((a, b) => b.rating - a.rating);
             setReadlist(sortedByRatings);
         }
     }
