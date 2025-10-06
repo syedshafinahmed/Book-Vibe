@@ -1,6 +1,10 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { addToStoredDB } from '../../Utilities/AddToDB';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 const BookDetails = () => {
     const data = useLoaderData();
@@ -10,6 +14,11 @@ const BookDetails = () => {
     const { bookName, author, review, tags, image, category, rating, yearOfPublishing, publisher, totalPages } = singleBook;
 
     const handleMarkAsRead = (id) => {
+        Swal.fire({
+            title: "Marked as read!",
+            text: "You can check out the books you've already read!",
+            icon: "success"
+        });
         addToStoredDB(id);
     }
     return (

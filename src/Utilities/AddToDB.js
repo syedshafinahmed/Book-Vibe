@@ -12,7 +12,7 @@ const getStoredBook = () => {
 const addToStoredDB = (id) => {
     const storedBookData = getStoredBook();
     if(storedBookData.includes(id)){
-        alert("already there");
+        console.log("already there");
     }
     else{
         storedBookData.push(id);
